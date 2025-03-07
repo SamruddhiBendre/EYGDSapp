@@ -40,7 +40,7 @@ export const CreateRecipe = () => {
     event.preventDefault();
     try {
       await axios.post(
-        "https://eygdsapp.onrender.com",
+        "https://eygdsapp.onrender.com/recipes",
         { ...recipe },
         {
           headers: { authorization: cookies.access_token },
