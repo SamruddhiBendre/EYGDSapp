@@ -1,16 +1,18 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ECF0F1;
+  font-family: "Poppins", sans-serif;
+  color: #2C3E50;
+}
+
+/* App Container */
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
 }
 
 /* Authentication Page */
@@ -19,7 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #eaeaea;
+  background: linear-gradient(135deg, #1ABC9C, #2C3E50);
 }
 
 .auth-container {
@@ -27,14 +29,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  margin: 20px;
-  width: 400px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  transition: transform 0.3s;
 }
 
+.auth-container:hover {
+  transform: scale(1.02);
+}
+
+/* Form Styles */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -44,33 +51,31 @@ body {
 label {
   font-weight: bold;
   margin-bottom: 5px;
-  color: #4B0082;
+  color: #2C3E50;
 }
 
 input {
   padding: 12px;
   font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #bbb;
-  transition: 0.3s ease-in-out;
+  border-radius: 6px;
+  border: 1px solid #BDC3C7;
+  transition: 0.3s;
 }
 
 input:focus {
-  border-color: #4B0082;
+  border-color: #1ABC9C;
   outline: none;
-  box-shadow: 0 0 5px rgba(75, 0, 130, 0.5);
+  box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
 }
 
 /* Navigation Bar */
 .navbar {
   width: 100%;
   height: 80px;
-  background-color: #4B0082;
+  background-color: #2C3E50;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-decoration: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -81,15 +86,15 @@ a {
   color: white;
   text-decoration: none;
   margin: 15px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 a:hover {
+  color: #F39C12;
+  border-bottom: 3px solid #F39C12;
   transform: scale(1.1);
-  border-bottom: 2px solid #FFD700;
-  color: #FFD700;
 }
 
 /* Create Recipe Section */
@@ -100,10 +105,15 @@ a:hover {
   align-items: center;
   padding: 25px;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin: 20px;
-  width: 320px;
+  width: 350px;
+  transition: 0.3s;
+}
+
+.create-recipe:hover {
+  transform: scale(1.03);
 }
 
 .create-recipe form {
@@ -111,6 +121,7 @@ a:hover {
   flex-direction: column;
 }
 
+/* List Styling */
 ul {
   list-style: none;
   padding: 0;
@@ -121,22 +132,22 @@ ul {
 }
 
 li {
-  border: 2px solid #4B0082;
+  border: 2px solid #1ABC9C;
   padding: 12px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
 li:hover {
-  background-color: #EEEAF2;
+  background-color: #D5F5E3;
   cursor: pointer;
 }
 
 /* Typography */
 h2 {
   margin-top: 0;
-  color: #4B0082;
+  color: #2C3E50;
 }
 
 /* Images */
@@ -144,41 +155,54 @@ img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-img {
-  width: 400px;
+  border-radius: 6px;
 }
 
 /* Paragraph Formatting */
 p {
   max-width: 400px;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.5;
   display: -webkit-box;
-  line-clamp: 5;
-  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 6em;
   color: #333;
 }
 
 /* Button Styling */
 button {
-  padding: 8px 12px;
+  padding: 10px 15px;
   cursor: pointer;
-  border-radius: 6px;
-  background-color: #4B0082;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1ABC9C, #16A085);
   color: white;
   font-size: 16px;
   font-weight: bold;
   border: none;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #6A0DAD;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #16A085, #1ABC9C);
+  transform: scale(1.07);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 600px) {
+  .auth-container,
+  .create-recipe {
+    width: 90%;
+    padding: 20px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }
